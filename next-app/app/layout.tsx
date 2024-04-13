@@ -1,8 +1,15 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import {
+  bebasNeue,
+  inter,
+  montserrat,
+  nunito,
+  playfairDisplay,
+  poppins,
+  vidaloka
+} from '@/utils/fonts'
+import Topbar from '@/components/shared/Topbar'
 
 export const metadata: Metadata = {
   title: 'Naranja Labs Fullstack',
@@ -16,7 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${poppins} ${bebasNeue}
+        ${playfairDisplay} ${vidaloka}
+        ${montserrat} ${nunito} ${inter}
+        mx-40 bg-primary text-black-1 text-lg poppins`}
+      >
+        <Topbar />
+        {children}
+      </body>
     </html>
   )
 }
