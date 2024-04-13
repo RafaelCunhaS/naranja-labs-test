@@ -7,3 +7,31 @@
     text-wrap: balance;
   }
 }
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+.bebasNeue {
+  font-family: var(--font-bebas-neue);
+}
+
+.playfairDisplay {
+  font-family: var(--font-playfair-display);
+}
+
+.vidaloka {
+  font-family: var(--font-vidaloka);
+}
+
+.montserrat {
+  font-family: var(--font-montserrat);
+}
+
+.nunito {
+  font-family: var(--font-nunito);
+}
+
+.inter {
+  font-family: var(--font-inter);
+}
