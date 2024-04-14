@@ -29,7 +29,7 @@ export default function Home() {
 
       <div className="w-[1260px] mt-20 bg-white rounded-[96px] drop-shadow-[0_24px_50px_rgba(0,0,0,0.05)] px-[62px] py-[34.5px]">
         <div className="flex gap-8 justify-around">
-          <div className="flex flex-col gap-2 justify-start">
+          <div className="search-bar-item">
             <p className="text-gray-1">Location</p>
             <div className="flex gap-2">
               <Image src="/assets/Location.svg" alt="location" width={24} height={24} />
@@ -37,7 +37,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-start">
+          <div className="search-bar-item">
             <p className="text-gray-1">Car Type</p>
             <div className="flex gap-6">
               <div className="flex gap-2 w-[152px]">
@@ -50,7 +50,7 @@ export default function Home() {
 
           <div className="border bg-gray-1 h-[60px] opacity-50" />
 
-          <div className="flex flex-col gap-2 justify-start">
+          <div className="search-bar-item">
             <p className="text-gray-1">Pick Up</p>
             <div className="flex gap-6">
               <div className="flex gap-2 w-[152px]">
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2 justify-start">
+          <div className="search-bar-item">
             <p className="text-gray-1">Return</p>
             <div className="flex gap-6">
               <div className="flex gap-2 w-[152px]">

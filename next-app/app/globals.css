@@ -6,6 +6,10 @@
   .button {
     @apply w-[149px] h-[60px] rounded-[32px] p-2 text-white;
   }
+
+  .search-bar-item {
+    @apply flex flex-col gap-2 justify-start;
+  }
 }
 
 @layer utilities {
