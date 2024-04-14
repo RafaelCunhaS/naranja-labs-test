@@ -18,9 +18,7 @@ export const POST = async (req: Request) => {
       },
       { status: 201 }
     )
-  } catch (error: any) {
-    console.log(error.message)
-
+  } catch (error) {
     if (error instanceof z.ZodError) {
       return Response.json(
         { path: error.errors[0].path[0], message: error.errors[0].message },
