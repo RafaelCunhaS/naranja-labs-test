@@ -1,75 +1,124 @@
 # Desafio Técnico - Full Stack Junior
 
-## Objetivos do desafio
+## Candidato
 
-Este desafio irá verificar se o candidato possuí as seguintes habilidades em um nível básico:
+- Rafael da Cunha Santos
+- [LinkedIn](https://www.linkedin.com/in/rafaelcunhas/)
+- [Github](https://github.com/RafaelCunhaS)
+- Telefone: (71) 99249-0607
+- Email: rafaelcs_94@hotmail.com
 
-- Noções de Nextjs
-- Noções de Tailwind
-- Noções de Backend
-- Git e Github
+## Hero Section
 
-## O que deverá ser desenvolvido
+![Car Rental](./image.png)
 
-- O candidato deverá escolher e desenvolver uma das heros sections dentro deste figma: https://encurtador.com.br/buzKZ
-- O candidato deverá desenvolver uma rota backend utilizando Nextjs
-- Tanto o front-end quanto o back-end devem ser feitos no mesmo projeto do Nextjs
+## Backend
 
-## Requisitos técnico
+- Rotas da API precisam da chave secreta ("naranja-labs") no header "Authorization":
 
-- O projeto foi criado utilizando o Nextjs
-- Foi configurado tailwind
-- ### Frontend
-  - A rota / exibe um hero, de acordo com o design escolhido, com pixel perfect
-- ### Backend
+  ```
+  headers: {
+    "Authorization": "naranja-labs"
+  }
+  ```
 
-  - Todas as rotas recebem um secret
-    - Caso o secret seja diferente de "naranja-labs", deverá retornar um erro com o melhor status code para essa situação.
-  - A rota /jobs retorna um json com todas as informações do arquivo jobs.ts (O local onde este arquivo esta localizado pode ser alterado de acordo com seu desejo)
-  - a rota /jobs?level=Junior deverá retornar apenas os jobs de level Junior
-  - a rota /job/[id] deverá ter o seguinte comportamento:
-    - Caso o id não exista no arquivo jobs.ts, deverá retornar um erro com um status code mais adequado para essa situação e uma messagem.
-    - Caso o id exista, deverá retornar apenas o job ao qual o id seja correspondente.
-  - a rota /job/submit deverá receber um body com a seguinte estrutura:
+- Caso contrário, retornarão uma resposta 401:
 
-    ```
+  ```
+  {
+    "message": "Unauthorized"
+  }
+  ```
+
+- Rotas API:
+
+  `GET http://localhost:3000/api/jobs`
+
+  - Sucesso (200):
+
+  ```json
+  [
     {
-      name: string,
-      age: number,
-      phone: string,
-      state:string,
-      city: string
-    }
-    ```
-
-    - Caso o body não seja enviado, deverá retornar um erro com o melhor status code para esse caso e uma mensagem
-    - Caso esteja tudo ok com o body, deverá retornar um json com a seguinte estrutura:
-
-    ```
+      "id": 1,
+      "job": "Full Stack Developer",
+      "level": "Junior",
+      "status": "open"
+    },
     {
-      message: Thank you for your
-      application, ${name}
+      "id": 2,
+      "job": "Frontend Developer",
+      "level": "Junior",
+      "status": "closed"
+    },
+    {
+      "id": 3,
+      "job": "Backend Developer",
+      "level": "Junior",
+      "status": "closed"
+    },
+    {
+      "id": 4,
+      "job": "Full Stack Developer",
+      "level": "Senior",
+      "status": "closed"
     }
-    ```
+  ]
+  ```
 
-## Como deverá ser feito o desenvolvimento e entrega
+  `GET http://localhost:3000/api/jobs?level=Senior`
 
-- Faça um fork desse repositório
-- No seu readme, inclua detalhes como:
-  - Nome completo
-  - Linkedin
-  - Github
-  - Telefone
-  - Email
-- Ao finalizar, envie o link do seu repositório para mateus@naranjalabs.dev
+  - Sucesso (200):
 
-## Dicas
+  ```json
+  [
+    {
+      "id": 4,
+      "job": "Full Stack Developer",
+      "level": "Senior",
+      "status": "closed"
+    }
+  ]
+  ```
 
-- Atente-se a qualidade do seu código
-- Atente-se ao pixel perfect
-- Cuidado com commit bomba
-- Faça commits bem descritivos
+  `GET http://localhost:3000/api/jobs/1`
 
-## Observações
+  - Sucesso (200):
 
-- Após a data final de entrega, nenhum novo commit será considerado
+  ```json
+  {
+    "id": 1,
+    "job": "Full Stack Developer",
+    "level": "Junior",
+    "status": "open"
+  }
+  ```
+
+  `POST http://localhost:3000/api/jobs/submit`
+
+  - Body esperado:
+
+  ```json
+  {
+    "name": "string",
+    "age": "number",
+    "phone": "string",
+    "state": "string",
+    "city": "string"
+  }
+  ```
+
+  - Sucesso (201):
+
+  ```json
+  {
+    "message": "Thank you for your application, ${name}"
+  }
+  ```
+
+  - Erro (400):
+
+  ```json
+  {
+    "message": "${error message}"
+  }
+  ```
