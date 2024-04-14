@@ -6,27 +6,27 @@ function Topbar() {
       <div className="flex justify-between mt-[18px]">
         <div className="flex gap-8">
           <span className="flex gap-4">
-            <Image src="/assets/Call.svg" alt="logo" width={24} height={24} />
+            <Image src="/assets/Call.svg" alt="telephone" width={24} height={24} />
             +12 345 6789 0
           </span>
           <span className="flex gap-4">
-            <Image src="/assets/Email.svg" alt="logo" width={24} height={24} />
+            <Image src="/assets/Email.svg" alt="email" width={24} height={24} />
             support@homie.com
           </span>
         </div>
 
         <div className="flex gap-8">
           <a href="">
-            <Image src="/assets/instagram.svg" alt="logo" width={24} height={24} />
+            <Image src="/assets/instagram.svg" alt="instagram logo" width={24} height={24} />
           </a>
           <a href="">
-            <Image src="/assets/facebook.svg" alt="logo" width={24} height={24} />
+            <Image src="/assets/facebook.svg" alt="facebook logo" width={24} height={24} />
           </a>
           <a href="">
-            <Image src="/assets/Twitter.svg" alt="logo" width={24} height={24} />
+            <Image src="/assets/Twitter.svg" alt="twitter logo" width={24} height={24} />
           </a>
           <a href="">
-            <Image src="/assets/Linkedin.svg" alt="logo" width={24} height={24} />
+            <Image src="/assets/Linkedin.svg" alt="linkedin logo" width={24} height={24} />
           </a>
         </div>
       </div>
@@ -43,7 +43,7 @@ function Topbar() {
           <a href="">Car Catalogue</a>
           <a href="">FAQ</a>
           <a href="" className="flex gap-[0.5px]">
-            More <Image src="/assets/chevron-down.svg" alt="logo" width={24} height={24} />
+            More <Image src="/assets/chevron-down.svg" alt="arrow down" width={24} height={24} />
           </a>
         </nav>
         <div className="flex gap-8 items-center">
