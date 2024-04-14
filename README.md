@@ -8,6 +8,20 @@
 - Telefone: (71) 99249-0607
 - Email: rafaelcs_94@hotmail.com
 
+## Rodando o projeto
+
+```bash
+    # Clone o repositório
+    $ git clone git@github.com:RafaelCunhaS/naranja-labs-test.git
+
+    # Entre no diretório do projeto NextJS
+    $ cd naranja-labs-test && cd next-app
+
+    # Rode o projeto
+    $ npm run dev
+    # Rotas do frontend e do backend estarão online em seu localhost 'http://localhost:3000'
+```
+
 ## Hero Section
 
 ![Car Rental](./image.png)
