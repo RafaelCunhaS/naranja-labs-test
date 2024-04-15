@@ -17,6 +17,9 @@
     # Entre no diretório do projeto NextJS
     $ cd naranja-labs-test && cd next-app
 
+    # Instale as dependências do projeto
+    $ npm install
+
     # Rode o projeto
     $ npm run dev
     # Rotas do frontend e do backend estarão online em seu localhost 'http://localhost:3000'
@@ -107,6 +110,14 @@
   }
   ```
 
+  - Erro (404):
+
+  ```json
+  {
+    "message": "Job not found"
+  }
+  ```
+
   `POST http://localhost:3000/api/jobs/submit`
 
   - Body esperado:
@@ -133,6 +144,7 @@
 
   ```json
   {
+    "path": "${error path}",
     "message": "${error message}"
   }
   ```
