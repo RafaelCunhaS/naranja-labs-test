@@ -110,6 +110,14 @@
   }
   ```
 
+  - Erro (404):
+
+  ```json
+  {
+    "message": "Job not found"
+  }
+  ```
+
   `POST http://localhost:3000/api/jobs/submit`
 
   - Body esperado:
@@ -136,6 +144,7 @@
 
   ```json
   {
+    "path": "${error path}",
     "message": "${error message}"
   }
   ```
