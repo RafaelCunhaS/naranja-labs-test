@@ -10,6 +10,7 @@ import {
   vidaloka
 } from '@/utils/fonts'
 import Topbar from '@/components/shared/Topbar'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Naranja Labs Fullstack',
@@ -27,10 +28,13 @@ export default function RootLayout({
         className={`${poppins} ${bebasNeue}
         ${playfairDisplay} ${vidaloka}
         ${montserrat} ${nunito} ${inter}
-        mx-40 bg-primary text-black-1 text-lg poppins`}
+         text-black-1 text-lg poppins`}
       >
-        <Topbar />
-        {children}
+        <div className="px-40 bg-primary h-[899px] relative -z-40">
+          <Topbar />
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )

@@ -3,7 +3,7 @@ import Image from 'next/image'
 function Topbar() {
   return (
     <div>
-      <div className="flex justify-between mt-[18px]">
+      <div className="flex justify-between pt-[18px]">
         <div className="flex gap-8">
           <span className="flex gap-4">
             <Image src="/assets/Call.svg" alt="telephone" width={24} height={24} />

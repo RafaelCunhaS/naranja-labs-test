@@ -29,18 +29,9 @@ export default function Home() {
         </div>
       </div>
 
-      <SearchBar />
-
       <SportCar />
 
-      <div className="mt-[144px] w-full flex gap-20 text-4xl text-gray-1">
-        <p className="playfair-display pl-[246.5px]">SimSong</p>
-        <p className="font-medium">Harps</p>
-        <p className="vidaloka">DiskVan</p>
-        <p className="montserrat font-bold">Ikon</p>
-        <p className="nunito font-bold">Strons</p>
-        <p className="inter font-bold pr-[246.5px]">Cocoon</p>
-      </div>
+      <SearchBar />
     </main>
   )
 }
